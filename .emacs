@@ -29,3 +29,7 @@
   :ensure t
   :config
   (evil-collection-init))
+
+(use-package evil-magit
+  :after evil
+  :ensure t)
