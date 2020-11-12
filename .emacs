@@ -1,6 +1,20 @@
+;; Start Emacs edit server
+(server-start)
+
+;; Do not create backup files
+(setq make-backup-files nil)
+
 ;; Don't litter my init file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
+
+;; Org Mode
+(setq org-capture-templates
+	 '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
+	 "* TODO %?\n  %i\n  %a")))
+
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "|" "DONE")))
 
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning) ("DOING" . "yellow")))
@@ -44,3 +58,8 @@
 	      (evil-org-set-key-theme '(textobjects insert navigation additional shift todo heading))))
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))
+  
+(evil-set-leader 'normal ",")
+
+(evil-define-key 'normal 'global (kbd "<leader>c") 'org-capture)
+(evil-define-key 'normal 'global (kbd "<leader>a") 'org-agenda)
