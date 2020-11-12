@@ -21,7 +21,11 @@
 
 ;; Add any custom settings on my jpmc workstation
 (add-to-list 'load-path (expand-file-name "jpmc" user-emacs-directory))
-(load "jpmc" 'noerror) 
+(load "jpmc" 'noerror)
+
+;; Add any custom settings on my laptop
+(add-to-list 'load-path (expand-file-name "mstine-mbp" user-emacs-directory))
+(load "mstine-mbp" 'noerror)
 
 ;; Set up package.el to work with MELPA
 (require 'package)
