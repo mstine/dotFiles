@@ -1,6 +1,9 @@
 ;; Start Emacs edit server
 (server-start)
 
+;; Do not show startup screen
+(setq inhibit-startup-screen t)
+
 ;; Do not create backup files
 (setq make-backup-files nil)
 
@@ -67,3 +70,5 @@
 
 (evil-define-key 'normal 'global (kbd "<leader>c") 'org-capture)
 (evil-define-key 'normal 'global (kbd "<leader>a") 'org-agenda)
+(evil-define-key 'motion 'org-agenda-mode-map (kbd "[") 'org-agenda-earlier)
+(evil-define-key 'motion 'org-agenda-mode-map (kbd "]") 'org-agenda-later)
