@@ -7,4 +7,12 @@ function know() {
     fi
 }
 
+function knowgrep() {
+    if [ "$1" != "" ]
+    then
+	grep -i $1 ~/know/*.org
+    fi
+}
+
+
 	
