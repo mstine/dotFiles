@@ -1,3 +1,7 @@
+;; Font size
+(set-face-attribute 'default nil
+    :height 250)
+
 (setq org-agenda-files
       '("~/know"))
 
