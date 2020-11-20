@@ -37,6 +37,9 @@
 (package-initialize)
 (package-refresh-contents)
 
+(use-package rust-mode
+  :ensure t)
+
 (use-package evil
   :ensure t
   :init
