@@ -11,6 +11,10 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
+;; Enable line numbers globally
+(when (version<= "26.0.50" emacs-version)
+  (global-display-line-numbers-mode))
+
 ;; Org Mode
 (setq org-capture-templates
 	 '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
