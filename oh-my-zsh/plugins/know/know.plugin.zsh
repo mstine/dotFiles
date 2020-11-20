@@ -14,5 +14,8 @@ function knowgrep() {
     fi
 }
 
+alias k=know
+alias kg=knowgrep
+
 
 	
