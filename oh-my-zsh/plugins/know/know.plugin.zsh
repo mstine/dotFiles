@@ -16,6 +16,3 @@ function knowgrep() {
 
 alias k=know
 alias kg=knowgrep
-
-
-	
