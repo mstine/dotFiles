@@ -21,10 +21,10 @@
 	 "* TODO %?\n  %i\n  %a")))
 
 (setq org-todo-keywords
-      '((sequence "TODO" "DOING" "|" "DONE")))
+      '((sequence "TODO" "DOING" "|" "DONE" "DELEGATED")))
 
 (setq org-todo-keyword-faces
-      '(("TODO" . org-warning) ("DOING" . "yellow")))
+      '(("TODO" . org-warning) ("DOING" . "yellow") ("DELEGATED" . "orange")))
 
 ;; Add any custom settings on my jpmc workstation
 (add-to-list 'load-path (expand-file-name "jpmc" user-emacs-directory))
