@@ -26,6 +26,11 @@
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning) ("DOING" . "yellow") ("DELEGATED" . "orange")))
 
+;; Configure org-refile to use top-level
+(setq org-refile-targets '((nil :maxlevel . 9)
+			   (org-agenda-files :maxlevel . 9)))
+(setq org-refile-use-outline-path 'file)
+
 ;; Add any custom settings on my jpmc workstation
 (add-to-list 'load-path (expand-file-name "jpmc" user-emacs-directory))
 (load "jpmc" 'noerror)
