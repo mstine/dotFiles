@@ -15,10 +15,6 @@
 
 (load "asciidoctor-mode" 'noerror)
 
-(setq org-mobile-directory "/Users/mstine/Library/Mobile Documents/iCloud~com~mobileorg~mobileorg/Documents")
-
-(setq org-mobile-inbox-for-pull "~/org-mobile-inbox/inbox.org")
-
 (setq diary-file "~/know/diary")
 
 (setq org-agenda-include-diary t)

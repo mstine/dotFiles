@@ -69,10 +69,6 @@
   :config
   (evil-collection-init))
 
-(use-package evil-magit
-  :after evil
-  :ensure t)
-
 (use-package evil-org
   :ensure t
   :after org
