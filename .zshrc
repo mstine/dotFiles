@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions emacs know)
+plugins=(git emacs know)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,39 +86,26 @@ export PATH=/usr/local/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-alias vi=/usr/local/bin/vim
-alias vim=/usr/local/bin/vim
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mstine/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/mstine/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mstine/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/mstine/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-# added by Anaconda2 4.3.1 installer
-#export PATH="/Users/mstine/anaconda2/bin:$PATH"
-
-# Go Environment
-export GOPATH="/Users/mstine/workspace/gopath"
-export PATH="$GOPATH/bin:$PATH"
-
-# Personal Bin
-export PATH="/Users/mstine/bin:$PATH"
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /Users/mstine/bin/vault vault
-
-# Node Version Manager
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-#[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+###########
+# SDKMAN! #
+###########
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/mstine/.sdkman"
 [[ -s "/Users/mstine/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mstine/.sdkman/bin/sdkman-init.sh"
+
+#########
+# pyenv #
+#########
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+#######################
+# zsh-autosuggestions #
+#######################
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
