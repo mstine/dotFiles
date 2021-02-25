@@ -46,12 +46,6 @@
 (package-initialize)
 (package-refresh-contents)
 
-(use-package org-gcal
-  :ensure t)
-(setq org-gcal-client-id "726669519905-2qigdl56iigkf0m274qa4gqfid26o1h6.apps.googleusercontent.com"
-      org-gcal-client-secret "MhlJdUdLpLrcUr6dp16n30zb"
-      org-gcal-fetch-file-alist '(("cd3al03otkp65g6680q766e7vc@group.calendar.google.com" . "/Users/mstine/know/google-calendar.org")))
-
 (use-package rust-mode
   :ensure t)
 
